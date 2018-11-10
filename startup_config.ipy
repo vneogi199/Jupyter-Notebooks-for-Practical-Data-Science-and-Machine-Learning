@@ -1,0 +1,21 @@
+
+# to hide warnings
+import warnings
+warnings.filterwarnings('ignore')
+
+# to display graphics in svg format
+%config InlineBackend.figure_format = 'svg'
+
+# to make width of cells span whole width of screen
+from IPython.core.display import display, HTML
+display(HTML("<style>.container { width:100% !important; }</style>"))
+
+# to view outputs of each line interactively
+from IPython.core.interactiveshell import InteractiveShell
+InteractiveShell.ast_node_interactivity = "all"
+
+# to display matplotlib outputs inline within the notebooks
+%matplotlib inline
+
+# for displaying tqdm progressbars
+from tqdm import tqdm_notebook
